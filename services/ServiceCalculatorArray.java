@@ -30,7 +30,7 @@ public class ServiceCalculatorArray<T extends Number> {
         return resultList.stream().mapToDouble(i -> i).toArray();
     }
 
-    private void operation(T[] array1, T[] array2, CalculatorOperation<T> calcOperation) throws Exception {
+    private void operation(T[] array1, T[] array2, ICalculatorOperation<T> calcOperation) throws Exception {
         if (array1.length >= array2.length)
             for (int i = 0; i < array1.length; i++) {
                 T n1 = getElement(i, array1);
