@@ -30,8 +30,11 @@ public class ServiceCalculator<T extends Number> {
         return n1 * n2;
     }
 
-    public double division(T num1, T num2) {
+    public double division(T num1, T num2) throws Exception {
         parseIntoToDouble(num1, num2);
+        if (n2 == 0) {
+            throw new Exception("Второй аргумент равен 0");
+        }
         return n1 / n2;
     }
 }
